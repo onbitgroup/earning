@@ -361,19 +361,21 @@ table, th, td{
     z-index: 99;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 200x;
-    background: black;
+    width: 100%;
+    height: 100%;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    opacity: 1;
+
 	
 }
 
 .loadex > img {
     width: 150px;
+    opacity: 0.5;
+	
 }
 
 .loadex.hidden {
