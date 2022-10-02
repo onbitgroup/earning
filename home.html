@@ -16,7 +16,9 @@
 <!--home-->
 <br><br>
 
-
+<div class="loadex">
+    <img src="loadex.gif"  alt="Loading..." />
+</div>
 
 	<div id="slider">
 		<figure>
@@ -167,6 +169,12 @@
           });
         });
  </script>
+<script>
+	window.addEventListener("load", function () {
+    const loader = document.querySelector(".loadex");
+    loader.className += " hidden"; // class "loader hidden"
+});
 
+</script>
 
 </html>
