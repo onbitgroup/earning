@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+	<a href="home.html"><img src="css/logo.png" width="150px"></a>
+	<a href="notify.html"><i class="fa fa-bell" style="float: right; font-size: 1.3rem; color: black"></i>
+		<li class="fa fa-circle" style="font-size: 10px; float: right; margin: -3px -20px; color: red; z-index: 1;"></li></a>
+
+<!--home-->
+<p><span style="color: gray; font-size: 15px;">Invitation:</span><span class="cpy" style="color:#23bd85; cursor: pointer;"> FJW3VY</span></p>
+<center>
+		<p style="color: gray;">Balance</p>
+		<h1>1.00 <li class="fa fa-dollar"></li></h1>
+	<br>
+
+<button class="btn-disabled" onclick="alert('Can not withdraw with VIP0. Buy a package')">Withdraw</button> 
+</center>
+
+<br><br>
+<center>
+	<div style="font-size: 15px; border:1px solid #23bd85; height: 150px; border-radius: 20px;">
+		<div style="margin:30px 0px;">
+		    <div class="member">
+				<i class="fa fa-database" style="font-size: 23px; color: #23bd85;"></i><br>
+				<p>Earn<br><b> 1.00</b></p>
+			</div>
+
+		    <div class="member">	
+				<i class="fa fa-credit-card" style="font-size: 23px; color: #23bd85;"></i><br>
+				<p>Deposits<br><b> 0.00</b></p>
+			</div>	
+
+		    <div class="member">	
+				<i class="fa fa-users" style="font-size: 23px; color: #23bd85;"></i><br>
+				<p>Referral<br><b> 0</b></p>
+			</div>
+
+		    <div class="member">	
+				<i class="fa fa-pencil" style="font-size: 23px; color: #23bd85;"></i><br>
+				<p>Task<br><b> 0</b></p>
+			</div>
+		</div>	
+	</div>
+
+</center>
+</div>
+<h3>Services</h3>
+<center>
+	<div class="pad">
+		<a href="info.html"><li class="fa fa-info" style="color: #23bd85;"><span> About</span></li></a>
+	</div><br>
+	<div class="pad">
+		<a href="https://t.me/+u6WqolwGLPQ3OWFl" target="_blank"><li class="fa fa-telegram" style="color: #00a8ff;"><span> Telegram</span></li></a>
+	</div><br>
+	<div class="pad">
+		<a href="support.html"><li class="fa fa-headphones" style="color: gray;"><span> Supports</span></li></a>
+	</div><br>	
+	<div class="pad">
+		<a href="deposit.html"><li class="fa fa-id-badge" style="color: #9600ff;"><span> Buy VIP</span></li></a>
+	</div><br>
+	<div class="pad">
+		<a href="share.html"><li class="fa fa-share" style="color: #d49101;"><span> Share</span></li></a>
+	</div><br>	
+	<div class="pad">
+		<a href="index.html"><li class="fa fa-power-off" style="color: red;"><span> Logout</span></li></a>
+	</div>			
+</center>
+<br><br><Br><br><Br>
+
+<footer>
+	<div class="tab">
+		<a href="home.html">	
+		    <div class="member">
+				<i class="fa fa-home"></i>
+				<p>Home</p>
+			</div>
+		</a>	
+		<a href="task.html">
+		    <div class="member">	
+				<i class="fa fa-tasks"></i>
+				<p>Task</p>
+			</div>
+		</a>	
+		<a href="record.html">		
+		    <div class="member">	
+				<i class="fa fa-history"></i>
+				<p>Record</p>
+			</div>
+		</a>	
+		<a href="user.html">
+		    <div class="member" style="border-top: 2px solid #23bd85; color: #23bd85;">	
+				<i class="fa fa-user"></i>
+				<p>Profile</p>
+			</div>
+		</a>
+	</div>
+		
+
+</footer>
+</body>
+
+<script>
+spans = document.querySelectorAll(".cpy");
+for (const span of spans) {
+  span.onclick = function() {
+    document.execCommand("copy");
+  }
+
+  span.addEventListener("copy", function(event) {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", span.textContent);
+      console.log(event.clipboardData.getData("text"))
+    }
+  });
+}
+</script>
+
+</html>

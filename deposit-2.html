@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Top-up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+	<a href="home.html"><img src="css/logo.png" width="150px"></a>
+	<a href="notify.html"><i class="fa fa-bell" style="float: right; font-size: 1.3rem; color: black"></i></a>
+
+<!--home-->
+
+
+<h3>Top-up</h3><hr>
+<center>
+
+	<h3>Remaining: <span style="color: #23bd85">24 hours</span></h3>
+
+	<br>
+<img src="image/qr.jpg" width="160px" style="background: white; padding: 10px; border-radius: 10px; border:1px solid #23bd85;">
+<p style="background: #23bd85; width: 80px; color: white; font-weight: bold; border-radius: 5px;">TRC20</p>
+<p>address:</p>
+<span style="background: white; padding: 8px; border-radius: 50px; cursor: pointer; border:1px solid #23bd85;" class="cpy">TMtHrTbZG21z6rtp7neN4KK3GMczKY6ZSD</span><br><br>
+
+<table>
+  <tr>
+    <th>User<hr></th>
+    <th>Token<hr></th>
+    <th>Country<hr></th>
+  </tr>
+  <tr>
+    <td >10245873</td>
+    <td>USDT</td>
+    <td>Sri Lanka</td>
+  </tr>
+
+</table>
+<br>
+
+<form action="https://sheetdb.io/api/v1/olr7hex6nzkjr" method="post" id="sheetdb-form">
+
+<input type="checkbox" checked value="submited" name="data[Submit]" style="display: none;">
+<button type="submit" class="btn">Submit</button>
+<a href="home.html"><span class="btn-cancel">Cancel</span></a>
+
+</form>
+
+</center>
+</div>
+<br><br>
+<br><br>
+<footer>
+	<div class="tab">
+		<a href="home.html">	
+		    <div class="member" style="border-top: 2px solid #23bd85; color: #23bd85;">
+				<i class="fa fa-home"></i>
+				<p>Home</p>
+			</div>
+		</a>	
+		<a href="task.html">
+		    <div class="member">	
+				<i class="fa fa-tasks"></i>
+				<p>Task</p>
+			</div>
+		</a>	
+		<a href="record.html">		
+		    <div class="member">	
+				<i class="fa fa-history"></i>
+				<p>Record</p>
+			</div>
+		</a>	
+		<a href="user.html">
+		    <div class="member">	
+				<i class="fa fa-user"></i>
+				<p>Profile</p>
+			</div>
+		</a>
+	</div>
+		
+
+</footer>
+</body>
+<script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('check.html', '_blank');
+
+          });
+        });
+ </script>
+<script>
+spans = document.querySelectorAll(".cpy");
+for (const span of spans) {
+  span.onclick = function() {
+    document.execCommand("copy");
+  }
+
+  span.addEventListener("copy", function(event) {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", span.textContent);
+      console.log(event.clipboardData.getData("text"))
+    }
+  });
+}
+</script>
+
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+	<a href="home.html"><img src="css/logo.png" width="150px"></a>
+	<a href="notify.html"><i class="fa fa-bell" style="float: right; font-size: 1.3rem; color: black"></i></a>
+
+<!--home-->
+
+
+<h3>Support</h3><hr>
+
+<h4>Your IP address is:</h4>
+        <p id="gfg"></p>
+</div>
+
+
+
+<hr><br>
+<center>
+<a href="https://t.me/janithsulakshana" target="_blank" 
+style="
+background: #00a8ff; 
+padding-left: 40px; 
+padding-right: 20px; 
+padding-bottom:10px; 
+padding-top:10px;
+color: white; 
+font-weight: bold; 
+border-radius: 50px;">
+<li class="fa fa-telegram" style="
+font-size: 2.5rem; 
+position: absolute; 
+margin: -9px -50px; 
+border:3px solid #00a8ff; 
+border-radius: 50px;"></li> Message</a>
+</center>
+
+</center>
+<footer>
+	<div class="tab">
+		<a href="home.html">	
+		    <div class="member" style="border-top: 2px solid #23bd85; color: #23bd85;">
+				<i class="fa fa-home"></i>
+				<p>Home</p>
+			</div>
+		</a>	
+		<a href="task.html">
+		    <div class="member">	
+				<i class="fa fa-tasks"></i>
+				<p>Task</p>
+			</div>
+		</a>	
+		<a href="record.html">		
+		    <div class="member">	
+				<i class="fa fa-history"></i>
+				<p>Record</p>
+			</div>
+		</a>	
+		<a href="user.html">
+		    <div class="member">	
+				<i class="fa fa-user"></i>
+				<p>Profile</p>
+			</div>
+		</a>
+	</div>
+		
+
+</footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+     
+    /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        $("#gfg").html(data.ip);
+    })
+    </script>
+</html>
