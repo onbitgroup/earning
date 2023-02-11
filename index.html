@@ -9,7 +9,7 @@
   <link rel="icon" href="tabicon.png">
 </head>
 <body>
-	<form action="https://sheetdb.io/api/v1/olr7hex6nzkjr" method="post" id="sheetdb-form">
+	<form>
 	<!-- logo -->	
 	<div class="container">
 		<img src="css/logo.png" width="150px">
@@ -32,7 +32,6 @@
 					placeholder="Password" required></div><br>
 
 					<button type="submit" class="btn" onclick="myFunction()">Login</button>
-					<p>Don't have an account <a style="color: #1da271;">register</a>.</p>
 				</div>			 
 			</div>
 		</div>
@@ -41,22 +40,6 @@
 </form>
 </body>
 
-<script>
-            var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-            window.open('home.html');
-
-          });
-        });
-</script>
 <script>
 	function openCity(evt, cityName) {
   // Declare all variables
@@ -85,7 +68,7 @@ function myFunction(){
   var pass = document.getElementById("pass").value;
 
 if(user == "Admin" && pass == "Password"){
-            window.location.href="register.html"
+            window.location.href="home.html"
         alert("correct");
    }else{
     alert("Incorrect username or password");
