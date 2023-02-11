@@ -32,7 +32,7 @@
 					placeholder="Password" required></div><br>
 
 					<button type="submit" class="btn" onclick="myFunction()">Login</button>
-					<p>Don't have an account <a href="register.html" style="color: #1da271;">register</a>.</p>
+					<p>Don't have an account <a style="color: #1da271;">register</a>.</p>
 				</div>			 
 			</div>
 		</div>
@@ -85,7 +85,7 @@ function myFunction(){
   var pass = document.getElementById("pass").value;
 
 if(user == "Admin" && pass == "Password"){
-            window.location.href="win.html"
+            window.location.href="register.html"
         alert("correct");
    }else{
     alert("Incorrect username or password");
